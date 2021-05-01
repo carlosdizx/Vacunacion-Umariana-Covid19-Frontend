@@ -1,4 +1,4 @@
-class Tipo {
+export class Tipo {
   id: number;
 
   nombre: string;
@@ -9,7 +9,7 @@ class Tipo {
   }
 }
 
-class Eps {
+export class Eps {
   id: number;
 
   nombre: string;
@@ -20,7 +20,7 @@ class Eps {
   }
 }
 
-class Estado {
+export class Estado {
   id: number;
 
   nombre: string;
