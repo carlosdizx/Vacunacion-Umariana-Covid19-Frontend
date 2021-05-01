@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Persona} from './persona';
+import {PersonaService} from './persona.service';
 
 @Component({
   selector: 'app-persona',
@@ -6,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonaComponent implements OnInit {
 
-  constructor() { }
+  personas: Persona[] = [];
+
+  constructor( private personaService: PersonaService) {
+  }
 
   ngOnInit(): void {
+    this.personas = this.personaService.darPersonas();
   }
 
 }
