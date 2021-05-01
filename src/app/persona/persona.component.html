@@ -10,6 +10,7 @@
       <th>Tipo</th>
       <th>Eps</th>
       <th>Estado</th>
+      <th>Facultad</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +28,7 @@
       <td *ngIf="persona.estado.nombre==='Anteriormente con covid19'" class="btn-warning">{{persona.estado.nombre}}</td>
       <td *ngIf="persona.estado.nombre==='Sano'" class="btn-warning">{{persona.estado.nombre}}</td>
       <td *ngIf="persona.estado.nombre==='Portador'" class="btn-danger">{{persona.estado.nombre}}</td>
+      <td>{{persona.facultad.nombre}}</td>
     </tr>
   </tbody>
 </table>

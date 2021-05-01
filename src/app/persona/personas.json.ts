@@ -1,4 +1,4 @@
-import {Eps, Estado, Persona, Tipo} from './persona';
+import {Eps, Estado, Facultad, Persona, Tipo} from './persona';
 export const PERSONAS: Persona[] = [
   {
     documento: 1087,
@@ -10,7 +10,8 @@ export const PERSONAS: Persona[] = [
     celular: 3008888111,
     tipo: new Tipo(),
     eps: new Eps(),
-    estado: new Estado()
+    estado: new Estado(),
+    facultad: new Facultad()
   },
   {
     documento: 1088,
@@ -22,7 +23,8 @@ export const PERSONAS: Persona[] = [
     celular: 3008888112,
     tipo: new Tipo(),
     eps: new Eps(),
-    estado: new Estado()
+    estado: new Estado(),
+    facultad: new Facultad()
   },
   {
     documento: 1089,
@@ -34,6 +36,7 @@ export const PERSONAS: Persona[] = [
     celular: 3008888113,
     tipo: new Tipo(),
     eps: new Eps(),
-    estado: new Estado()
+    estado: new Estado(),
+    facultad: new Facultad()
   },
 ];

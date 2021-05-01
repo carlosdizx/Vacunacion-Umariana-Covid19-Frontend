@@ -31,6 +31,17 @@ export class Estado {
   }
 }
 
+export class Facultad {
+  id: number;
+
+  nombre: string;
+
+  constructor() {
+    this.id = 0;
+    this.nombre = '';
+  }
+}
+
 export class Persona{
   documento: number;
 
@@ -52,6 +63,8 @@ export class Persona{
 
   estado: Estado;
 
+  facultad: Facultad;
+
   constructor() {
     this.documento = 0;
     this.nombres = '';
@@ -63,5 +76,6 @@ export class Persona{
     this.tipo = new Tipo();
     this.eps = new Eps();
     this.estado = new Estado();
+    this.facultad = new Facultad();
   }
 }
