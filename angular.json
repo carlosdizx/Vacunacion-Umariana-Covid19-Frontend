@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "Vacunacion-Covid19-Universidad-Mariana-Frontend"
+  "defaultProject": "Vacunacion-Covid19-Universidad-Mariana-Frontend",
+  "cli": {
+    "analytics": "4ded61b2-1865-4918-a620-4dff9a03ad4c"
+  }
 }
