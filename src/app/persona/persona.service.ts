@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {Persona} from './persona';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {PERSONAS} from './personas.json';
 // import {PERSONAS} from './personas.json';
@@ -11,15 +11,18 @@ import {PERSONAS} from './personas.json';
 })
 export class PersonaService {
 
-  // private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   private urlEndpoint = 'http://localhost:8080/persona';
 
-  constructor( ) {
+  constructor(private http: HttpClient) {
   }
 
   darPersonas(): Observable<Persona[]>{
-    return of(PERSONAS);
+    return this.http
+      .get(`${this.urlEndpoint}/all`)
+      .pipe(map((response) => response as Persona[]));
+    // return of(PERSONAS);
   }
 
   /*

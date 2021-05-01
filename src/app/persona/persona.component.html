@@ -15,14 +15,18 @@
   <tbody>
     <tr *ngFor="let persona of personas">
       <td>{{persona.documento}}</td>
-      <td>{{persona.nombres}} {{persona.apellidos}}</td>
+      <td>{{persona.nombres | uppercase}} {{persona.apellidos | uppercase}}</td>
       <td>{{persona.fechaNacimiento | date: "EEEE dd MMMM - YYYY"}}</td>
       <td>{{persona.sangre}}</td>
       <td>{{persona.correo}}</td>
       <td>{{persona.celular}}</td>
       <td>{{persona.tipo.nombre}}</td>
       <td>{{persona.eps.nombre}}</td>
-      <td>{{persona.estado.nombre}}</td>
+      <td *ngIf="persona.estado.nombre==='Vacunado'" class="btn-success">{{persona.estado.nombre}}</td>
+      <td *ngIf="persona.estado.nombre==='Anteriormente vacunado, pendiente vacuna'" class="btn-success">{{persona.estado.nombre}}</td>
+      <td *ngIf="persona.estado.nombre==='Anteriormente con covid19'" class="btn-warning">{{persona.estado.nombre}}</td>
+      <td *ngIf="persona.estado.nombre==='Sano'" class="btn-warning">{{persona.estado.nombre}}</td>
+      <td *ngIf="persona.estado.nombre==='Portador'" class="btn-danger">{{persona.estado.nombre}}</td>
     </tr>
   </tbody>
 </table>
