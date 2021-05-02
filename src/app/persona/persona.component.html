@@ -24,7 +24,7 @@
       <td>{{persona.tipo.nombre}}</td>
       <td>{{persona.eps.nombre}}</td>
       <td *ngIf="persona.estado.nombre==='Vacunado'" class="btn-success">{{persona.estado.nombre}}</td>
-      <td *ngIf="persona.estado.nombre==='Anteriormente vacunado, pendiente vacuna'" class="btn-success">{{persona.estado.nombre}}</td>
+      <td *ngIf="persona.estado.nombre==='Anteriormente vacunado, pendiente vacuna'" class="btn-primary">{{persona.estado.nombre}}</td>
       <td *ngIf="persona.estado.nombre==='Anteriormente con covid19'" class="btn-warning">{{persona.estado.nombre}}</td>
       <td *ngIf="persona.estado.nombre==='Sano'" class="btn-warning">{{persona.estado.nombre}}</td>
       <td *ngIf="persona.estado.nombre==='Portador'" class="btn-danger">{{persona.estado.nombre}}</td>

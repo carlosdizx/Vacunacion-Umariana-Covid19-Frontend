@@ -6,6 +6,7 @@
     <th>Nombres y apellidos</th>
     <th>Celular</th>
     <th>Estado</th>
+    <th>Facultad</th>
   </tr>
   </thead>
   <tbody>
@@ -13,11 +14,12 @@
     <td>{{persona.documento}}</td>
     <td>{{persona.nombres | uppercase}} {{persona.apellidos | uppercase}}</td>
     <td>{{persona.celular}}</td>
-    <td *ngIf="persona.estado.nombre==='Vacunado'" class="btn-success">{{persona.estado.nombre}}</td>
-    <td *ngIf="persona.estado.nombre==='Anteriormente vacunado, pendiente vacuna'" class="btn-success">{{persona.estado.nombre}}</td>
-    <td *ngIf="persona.estado.nombre==='Anteriormente con covid19'" class="btn-warning">{{persona.estado.nombre}}</td>
-    <td *ngIf="persona.estado.nombre==='Sano'" class="btn-warning">{{persona.estado.nombre}}</td>
-    <td *ngIf="persona.estado.nombre==='Portador'" class="btn-danger">{{persona.estado.nombre}}</td>
+    <td>{{persona.estado.nombre}}</td>
+    <td *ngIf="persona.facultad.nombre==='Ingeniería'" class="bg-primary">{{persona.facultad.nombre}}</td>
+    <td *ngIf="persona.facultad.nombre==='Ciencias de la Salud'" class="btn-success">{{persona.facultad.nombre}}</td>
+    <td *ngIf="persona.facultad.nombre==='Ciencias contables, Economicas y financieras'" class="btn-warning">{{persona.facultad.nombre}}</td>
+    <td *ngIf="persona.facultad.nombre==='Humanidades y Ciencias y Sociales'" class="btn-danger">{{persona.facultad.nombre}}</td>
+    <td *ngIf="persona.facultad.nombre==='Administrativa, secretartia y logistica'" class="btn-light">{{persona.facultad.nombre}}</td>
   </tr>
   </tbody>
 </table>
