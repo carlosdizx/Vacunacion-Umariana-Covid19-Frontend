@@ -13,7 +13,7 @@ export class PersonaService {
 
    private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  private urlEndpoint = 'http://localhost:8080/persona';
+  private urlEndpoint = 'http://localhost:8080/personas';
 
   constructor(private http: HttpClient) {
   }
@@ -22,7 +22,12 @@ export class PersonaService {
     return this.http
       .get(`${this.urlEndpoint}/all`)
       .pipe(map((response) => response as Persona[]));
-    // return of(PERSONAS);
+  }
+
+  darDocentes(): Observable<Persona[]>{
+    return this.http
+      .get(`${this.urlEndpoint}/docentes`)
+      .pipe(map((response) => response as Persona[]));
   }
 
   /*

@@ -13,21 +13,10 @@ export class DocentesComponent implements OnInit {
   constructor(private service: PersonaService) { }
 
   ngOnInit(): void {
-    this.darPersonas();
+    this.darDocentes();
   }
 
-  darPersonas(): void{
-    this.service.darPersonas().subscribe(personas => (this.personas = personas));
-    this.personas.sort((a, b) => {
-      if (a.nombres < b.nombres) {
-        return -1;
-      }
-      else if (a.estado.nombre > b.estado.nombre) {
-        return 1;
-      }
-      else {
-        return 0;
-      }
-    });
+  darDocentes(): void{
+    this.service.darDocentes().subscribe(personas => (this.personas = personas));
   }
 }
